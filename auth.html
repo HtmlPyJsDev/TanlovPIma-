@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish va Kirish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="register-form">
+        <h2>Ro'yxatdan o'tish</h2>
+        <h4>2024 robototexnika sayti uchun</h4>
+        <input type="text" id="reg-username" placeholder="Foydalanuvchi nomi" required>
+        <input type="text" id="reg-username" placeholder="Telefon nomeri +998" required>
+        <input type="email" id="reg-email" placeholder="Email" required>
+        <input type="password" id="reg-password" placeholder="Parol" required>
+        <input type="password" id="reg-confirm-password" placeholder="Parolni tasdiqlang" required>
+        <div id="reg-error" class="error"></div>
+        <button onclick="register()">Ro'yxatdan o'tish</button>
+        <div id="reg-success" class="success"></div>
+        <div class="switch-form">
+            Allaqachon hisobingiz bormi? <a href="#" onclick="showLoginForm()">Kirish</a>
+        </div>
+    </div>
+
+    <div class="container" id="login-form" style="display: none;">
+        <h2>Kirish</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Parol" required>
+        <div id="login-error" class="error"></div>
+        <button onclick="login()">Kirish</button>
+        <div id="login-success" class="success"></div>
+        <div class="switch-form">
+            Hisobingiz yo'qmi? <a href="#" onclick="showRegisterForm()">Ro'yxatdan o'tish</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
